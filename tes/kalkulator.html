@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="hasil"></div>
+
+    <script>
+      function sum(a, b) {
+        return a + b;
+      }
+
+      function minus(a, b) {
+        return a - b;
+      }
+      function time(a, b) {
+        return a * b;
+      }
+      function divide(a, b) {
+        return a / b;
+      }
+
+      alert("pilih kamu mau melakukan apa");
+      alert("1.Tambah\n2.Kurang\n3.kali\n4.pembagian");
+      let n = parseInt(prompt(""));
+      let result;
+      if (n === 1) {
+        let n = prompt();
+        let p = prompt();
+        result = sum(parseInt(n), parseInt(p));
+      } else if (n === 2) {
+        let n = prompt();
+        let p = prompt();
+        result = minus(parseInt(n), parseInt(p));
+      } else if (n === 3) {
+        let n = prompt();
+        let p = prompt();
+        result = time(parseInt(n), parseInt(p));
+      } else if (n === 4) {
+        let n = prompt();
+        let p = prompt();
+        result = divide(parseInt(n), parseInt(p));
+      }
+
+      const hasil = document.getElementById("hasil");
+      hasil.textContent = "hasil" + result;
+    </script>
+  </body>
+</html>

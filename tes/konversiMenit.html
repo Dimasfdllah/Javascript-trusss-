@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function konversiMenit(menit) {
+        let jam = Math.floor(menit / 60); // Menghitung jumlah jam (bulatkan ke bawah)
+        let sisaMenit = menit % 60; // Menghitung sisa menit setelah diubah ke jam
+
+        // Format hasil konversi dengan dua digit untuk menit (jika angka menit < 10)
+        let hasilKonversi = jam + ":" + (sisaMenit < 10 ? "0" : "") + sisaMenit;
+        return hasilKonversi;
+      }
+
+      console.log(konversiMenit(63));
+      console.log(konversiMenit(124));
+    </script>
+  </body>
+</html>

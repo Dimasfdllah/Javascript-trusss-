@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // trim untuk mengapus spasi kosong di awal dan akhir
+      let nama = prompt();
+      if (nama.trim() === "" || nama === null || nama === undefined) {
+        alert("Nama wajib diisi");
+      }
+      let peran = prompt();
+      if (parseInt(peran) === 1) {
+        alert(`hallo Ksatria ${nama}, kamu dapat menyerang dengan senjatamu`);
+      } else if (parseInt(peran) === 2) {
+        alert(`hallo Tabib ${nama}, kamu akan membantu temanmu yang terluka`);
+      } else if (parseInt(peran) === 3) {
+        alert(`Halo ${nama}, ciptakan keajaiban yang membantu kemenanganmu`);
+      } else {
+        alert("kayaknya kamu jadi bot aja ya, peran yang kau pilih gaada");
+      }
+    </script>
+  </body>
+</html>

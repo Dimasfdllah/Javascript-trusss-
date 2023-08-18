@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function xo(str) {
+        let countX = 0;
+        let countO = 0;
+        for (let i = 0; i < str.length; i++) {
+          if (str[i] === "x" || str[i] === "X") {
+            countX++;
+          } else if (str[i] === "o" || str[i] === "O") {
+            countO++;
+          }
+        }
+        return countX === countO;
+      }
+
+      console.log(xo("xoxoxo"));
+      console.log(xo("oxooxo"));
+      console.log(xo("oxo"));
+      console.log(xo("xxxooo"));
+      console.log(xo("xoxooxxo"));
+    </script>
+  </body>
+</html>

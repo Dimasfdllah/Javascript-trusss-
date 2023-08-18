@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 2, 3, 4, 5, 6];
+      console.log(arr);
+
+      // pada array kita bisa menampung banayk data dan tie data yang berbeda
+      let arr2 = [1, "2", [1, 2, 3], { nama: "test" }, null, false];
+
+      // array ada dua jenis
+      // array 1 dimensi dan array 2 dimensi
+
+      let dimensi1 = [1, 2, 3, 4, 5, 6];
+      let dimensi2 = [
+        [1, 2, 3],
+        [4, 5, 6],
+      ];
+
+      // cara mengaksesnya
+      // gunakan looping dan indexing
+
+      // dimensi 1
+      console.log(dimensi1[2]);
+      // dimensi 2
+      console.log(dimensi2[1]);
+      console.log(dimensi2[1][2]);
+
+      //   cara untuk looping pada array 2 dimensi
+      for (let i = 0; i < dimensi2.length; i++) {
+        for (let j = 0; j < dimensi2[i].length; j++) {
+          console.log(dimensi2[i][j]);
+        }
+      }
+
+      //   normalnya array dimensi 2 sering digunakan pada kasus tabel
+      /*
+      [
+        ["dimas","indonesia",'22 tahun']
+        ["dima","singapore",'19 tahun']
+        
+    ]
+    */
+
+      let orang = [
+        ["dimas", "indonesia", "18 tahun"],
+        ["dima", "singapore", "19 tahun"],
+      ];
+
+      for (let i = 0; i < orang.length; i++) {
+        for (let j = 0; j < orang[i].length; j++) {
+          if (j === 0) {
+            console.log(`nama : ${orang[i][j]}`);
+          } else if (j === 1) {
+            console.log(`lokasi : ${orang[i][j]}`);
+          } else {
+            console.log(`umur : ${orang[i][j]}`);
+          }
+        }
+        console.log("");
+      }
+    </script>
+  </body>
+</html>

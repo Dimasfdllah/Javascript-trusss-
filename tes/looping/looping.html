@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // dalam looping ada yang namanya arah ,kiri atau kanan,kiri itu pengurangan dan kanan itu pertambahan
+      // cth
+
+      //   let j = 0;
+      //   while (j <= 5) {
+      //     console.log(j);
+      //     j++;
+      //   }
+
+      //   let i = 5;
+      //   while (i >= 0) {
+      //     console.log(i);
+      //     i--;
+      //   }
+
+      for (let i = 0; i < 5; i++) {
+        console.log(i);
+      }
+
+      //   contoh kasus
+      let name = "dimas";
+      // ada yang namanya method length untuk tipe data string dan array
+      // method length mengembalikan nilai angka,total huruf yang ada pada string atau total element yang ada padda array
+      for (let i = 0; i < name.length; i++) {
+        console.log(name[i]);
+      }
+      //   pada tipe data string ato array di js, ada yang namanya indexing
+      // dimana index itu sudah pasti berawal dari 0
+
+      //   diberika kasus untuk membalikkan suatu kata, tanpa menggunakan method reverse
+      let result = "";
+      for (let i = name.length - 1; i >= 0; i--) {
+        result += name[i]; // s > sa > sam > sami > samid
+      }
+      console.log(result);
+
+      //   nested loop
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+          console.log(j);
+        }
+        console.log("");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function bandingkanAngka(angka1, angka2) {
+        let result = "";
+        if (angka1 < angka2) {
+          result = true;
+        } else if (angka1 > angka2) {
+          result = false;
+        } else {
+          result = -1;
+        }
+        return result;
+      }
+      console.log(bandingkanAngka(5, 8));
+      console.log(bandingkanAngka(5, 3));
+      console.log(bandingkanAngka(4, 4));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = [
+        ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
+        ["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],
+        ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
+        ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"],
+      ];
+
+      function dataHandling(data) {
+        let result = "";
+        for (let i = 0; i < data.length; i++) {
+          for (let j = 0; j < data[i].length; j++) {
+            if (j === 0) {
+              let no = `Nomor ID : ${data[i][j]}`;
+              result += no;
+              //   console.log(no);
+            } else if (j === 1) {
+              let nama = `Nama Lengkap : ${data[i][j]}`;
+              result += `\n${nama}`;
+            } else if (j === 2) {
+              let tempat = `TTL : ${data[i][j]} ${data[i][j + 1]}`;
+              result += `\n${tempat}`;
+            } else if (j === 4) {
+              let hobby = `Hobby : ${data[i][j]}`;
+              result += `\n${hobby}`;
+            }
+          }
+          result += `\n\n`;
+        }
+        return result;
+      }
+
+      //   let inpu = [
+      //     "0001",
+      //     "Roman Alamsyah",
+      //     "Bandar Lampung",
+      //     "21/05/1989",
+      //     "Membaca",
+      //   ];
+
+      //   function dataHandling2(inp) {
+      //     let hasil = [];
+      //     for (let i = 0; i < inp.length; i++) {
+      //       result = "";
+      //       if (i === 1) {
+      //         result += inp[i].concat(" " + "Elsharawy");
+      //         hasil.push(result);
+      //       } else if (i === 2) {
+      //         result += "Provinsi" + " " + inp[i];
+      //         hasil.push(result);
+      //       } else if (i === 3) {
+      //         result += inp[i];
+      //         hasil.push(result);
+      //       }else if( )
+      //     }
+      //     return hasil;
+      //   }
+
+      //   console.log(dataHandling2(inpu));
+      //   console.log(dataHandling(input));
+
+      function dataHandling(input) {
+        // Menggabungkan Nama Depan dengan Nama Belakang
+        input[1] = input[1].concat("Elsharawy");
+
+        // Menggabungkan "Provinsi" dengan Nama Kota
+        input[2] = "Provinsi " + input[2];
+
+        // Mendapatkan Bulan dari Tanggal Lahir
+        const tanggalLahir = input[3].split("/");
+        const bulan = Number(tanggalLahir[1]);
+        const daftarBulan = [
+          "Invalid",
+          "Januari",
+          "Februari",
+          "Maret",
+          "April",
+          "Mei",
+          "Juni",
+          "Juli",
+          "Agustus",
+          "September",
+          "Oktober",
+          "November",
+          "Desember",
+        ];
+        const namaBulan = daftarBulan[bulan];
+
+        // Mendapatkan Tahun, Tanggal, dan Bulan dalam Format Tertentu
+        const tahun = tanggalLahir[2];
+        const tanggal = tanggalLahir[0];
+        const formatTanggalLahir =
+          tanggal + "-" + String(bulan).padStart(2, "0") + "-" + tahun;
+
+        // Batasi Nama menjadi 15 Karakter
+        input[1] = input[1].slice(0, 15);
+
+        return input;
+      }
+
+      let inp = [
+        "0001",
+        "Roman Alamsyah ",
+        "Bandar Lampung",
+        "21/05/1989",
+        "Membaca",
+      ];
+      console.log(dataHandling(inp));
+    </script>
+  </body>
+</html>

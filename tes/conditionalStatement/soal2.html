@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let hari = 21;
+      let bulan = 2;
+      let tahun = 1945;
+
+      switch (bulan) {
+        case 1:
+          month = "Januari";
+          break;
+        case 2:
+          month = "Februari";
+          break;
+        case 3:
+          month = "Maret";
+          break;
+        case 4:
+          month = "April";
+          break;
+        case 5:
+          month = "Mei";
+          break;
+        case 6:
+          month = "Juni";
+          break;
+        case 7:
+          month = "Juli";
+          break;
+        case 8:
+          month = "Agustus";
+          break;
+        case 9:
+          month = "September";
+          break;
+        case 10:
+          month = "Oktober";
+          break;
+        case 11:
+          month = "November";
+          break;
+        case 12:
+          month = "Desember";
+      }
+
+      if (
+        hari >= 1 &&
+        hari <= 31 &&
+        month >= 1 &&
+        month <= 12 &&
+        tahun >= 1900 &&
+        tahun <= 2200
+      ) {
+        console.log(`${hari} ${month} ${tahun}`);
+      } else {
+        console.log("Tanggal, bulan, atau tahun tidak valid.");
+      }
+    </script>
+  </body>
+</html>
